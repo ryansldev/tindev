@@ -5,6 +5,7 @@ import { LikeController } from "./controllers/LikeController";
 
 const router = Router();
 
+router.get("/devs", new DevController().index);
 router.post("/devs", new DevController().store);
 
 router.post("/devs/:devId/likes", new LikeController().store);
