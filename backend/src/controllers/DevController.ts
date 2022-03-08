@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { api } from "../services/github";
+import { api } from "../libs/githubApi";
 
 import { Dev } from "../models/Dev";
 
