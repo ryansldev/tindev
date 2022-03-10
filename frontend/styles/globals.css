@@ -1,3 +1,13 @@
+:root {
+  --background-color: #f5f5f5;
+  --placeholder-color: #999;
+  --input-color: #666;
+
+  --input-border-color: #ddd;
+
+  --primary-orange: #DF4723;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,4 +25,13 @@ body, html {
 
 body, input, button {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  color: var(--input-color);
+  border: 1px solid var(--input-border-color);
+}
+
+input::placeholder {
+  color: var(--placeholder-color);
 }
