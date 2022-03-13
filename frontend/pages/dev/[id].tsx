@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { api } from "../services/api";
@@ -67,7 +68,11 @@ const Main: NextPage = () => {
       </Head>
 
       <main className={styles.mainContainer}>
-        <Image src="/logo.svg" alt="tindev" width="100" height="100" />
+        <Link href="/" passHref={true}>
+          <div style={{ cursor: "pointer" }}>
+            <Image src="/logo.svg" alt="tindev" width={240} height={88} />
+          </div>
+        </Link>
         {devs.length > 0 ? (
           <ul>
             {devs.map((dev) => {
