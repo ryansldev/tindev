@@ -78,7 +78,13 @@ const Main: NextPage = () => {
             {devs.map((dev) => {
               return (
                 <li key={dev._id}>
-                  <img src={dev.avatar} alt={dev.name} />
+                  <Image
+                    src={dev.avatar}
+                    alt={dev.name}
+                    layout="responsive"
+                    width={282}
+                    height={282}
+                  />
                   <footer>
                     <strong>{dev.name}</strong>
                     <p>{dev.bio}</p>
